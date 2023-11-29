@@ -82,11 +82,15 @@ justify-content list-style margin none padding
   /* aligne horizontalement les enfants */
   display: flex;
   /* centre horizontalement les enfants */
-  
+    justify-content: center;
   /* enlève les marges par défaut */
+  margin: 0;
   /* enlève les padding par défaut */
+  padding: 0;
   /* enlève les puces par défaut */
+  list-style: none;
   /* espace entre les enfants */
+    gap: 1rem;
 }
     </style>
 </head>
@@ -95,7 +99,7 @@ justify-content list-style margin none padding
 
     </header>
     <main>
-        <div class="carrousel" x-data="{}" >
+        <div class="carrousel" x-data="{hrefCourant: '#ecran-1',}" >
             <button class="carrousel_btn carrousel_btn-avant" aria-label="slide précedant" 
             @click="$refs.parent.scrollBy(-$refs.parent.clientWidth, 0)">
                 &lt;
