@@ -28,6 +28,8 @@
             display: flex;
           /* largeur du parent */
             width: 100%;
+            overflow-x: scroll; /* permet de scroller horizontalement */
+            scroll-behavior: smooth; /* animation de défilement */
         
         }
         .carrousel_ecran {
@@ -47,7 +49,7 @@
 
     </header>
     <main>
-        <div class="carrousel" x-data="{}">
+        <div class="carrousel" x-data="{}" >
             <button class="carrousel_btn carrousel_btn-avant" aria-label="slide précedant"><</button><button class="carrousel_btn carrousel_btn-apres" aria-label="slide suivant">></button>
             <div class="carrousel_parent-ecrans">
                 <div id="ecran-1" class="carrousel_ecran">
