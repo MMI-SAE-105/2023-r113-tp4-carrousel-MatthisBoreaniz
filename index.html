@@ -19,7 +19,7 @@
         img {
           /* image responsive,
           largeur maxi */
-            max-width: 100%;
+            width: 100%;
           /* hauteur "auto" */
             height: auto;
         }
@@ -96,10 +96,11 @@ justify-content list-style margin none padding
     
 }
 
-.caroussel_lien.actif {
+.actif {
     color: rgb(255, 255, 255);
-    background-color: rgb(179, 113, 240);
     border: rgb(195, 179, 0) solid 2px;
+    border-radius: 0.5rem;
+    
 }
 
 
@@ -116,8 +117,9 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url(https://external-preview.redd.it/cex0iXYBxrWLY5_WKlAKAW98jvc5u4fx6bRTuz5ta3o.jpg?auto=webp&s=f9c167e31a8c7317e5a7f32d7c0b4145b8a2754f);
-  background-size: 100%;
+  background-image: url(https://s3-alpha.figma.com/hub/file/3642577468/957396d3-f8b7-4c1f-850d-ad4d68ba377b-cover.png);
+  width: 100%;
+  background-size: cover;
 }
 figcaption {
   text-align: center;
