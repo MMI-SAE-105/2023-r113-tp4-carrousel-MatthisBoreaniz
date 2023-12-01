@@ -31,6 +31,8 @@
             overflow-x: scroll; /* permet de scroller horizontalement */
             scroll-behavior: smooth; /* animation de défilement */
             scroll-snap-type: x mandatory; /* permet de scroller par blocs */
+            margin-bottom: 20px;
+            max-width: 500px;
             
         
         }
@@ -73,6 +75,7 @@
 
 .carrousel_btn-apres {
   right: 0;
+  z-index: 1;
 }
 /* en vrac :
 0 0 1rem display center flex gap 
@@ -82,7 +85,7 @@ justify-content list-style margin none padding
   /* aligne horizontalement les enfants */
   display: flex;
   /* centre horizontalement les enfants */
-    justify-content: center;
+  justify-content: center;
   /* enlève les marges par défaut */
   margin: 0;
   /* enlève les padding par défaut */
@@ -91,10 +94,54 @@ justify-content list-style margin none padding
   list-style: none;
   /* espace entre les enfants */
     gap: 1rem;
+    
 }
+
 .caroussel_lien.actif {
-    color: red;
+    color: rgb(255, 255, 255);
+    background-color: rgb(179, 113, 240);
+    border: rgb(195, 179, 0) solid 2px;
 }
+
+
+.caroussel_lien {
+ background-color: blueviolet;
+  color: #fff;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  text-decoration: rgb(255, 179, 0)
+  
+}
+.caroussel_lien:hover { 
+  background-color: rgb(255, 0, 162);
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url(https://external-preview.redd.it/cex0iXYBxrWLY5_WKlAKAW98jvc5u4fx6bRTuz5ta3o.jpg?auto=webp&s=f9c167e31a8c7317e5a7f32d7c0b4145b8a2754f);
+  background-size: 100%;
+}
+figcaption {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  background-color: rgb(179, 113, 240);
+  border: rgb(1195, 179, 0) solid 2px;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  margin: 0.5rem;
+display: flex;
+flex-direction: column;
+align-items: center;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+}
+ .image_zelda {
+  border-radius: 0.5rem;
+  border:rgb(195, 179, 0) solid 4px;
+
+
     </style>
 </head>
 <body>
@@ -121,43 +168,44 @@ justify-content list-style margin none padding
             >
                 <div id="ecran-1" class="carrousel_ecran">
                     <figure>
-                        <img src="https://picsum.photos/seed/1/500/300" alt="image ecran 1">
-                        <figcaption>Ecran 1</figcaption>
+                        <img  class="image_zelda" src="https://static.actugaming.net/media/2020/08/zelda-skyward-1.jpg" alt="image zelda ss">
+                        <figcaption>Skyward Sword</figcaption>
                     </figure>
                 </div>
                 <div id="ecran-2" class="carrousel_ecran">
                     <figure>
-                        <img src="https://picsum.photos/seed/2/500/300" alt="image ecran 2">
-                        <figcaption>Ecran 2</figcaption>
+                        <img class="image_zelda" src="https://s1.1zoom.me/b4952/301/The_Legend_of_Zelda_Warriors_Scenery_Breath_of_the_516325_1920x1080.jpg" alt="image zelda botw">
+                        <figcaption>Breath of The Wild</figcaption>
                     </figure>
                 </div>
                 <div id="ecran-3" class="carrousel_ecran">
                     <figure>
-                        <img src="https://picsum.photos/seed/3/500/300" alt="image ecran 3">
-                        <figcaption>Ecran 3</figcaption>
+                        <img class="image_zelda" src="https://i0.wp.com/www.nintendo-town.fr/wp-content/uploads/2016/01/The-Legend-of-Zelda-Twilight-Princess-HD.jpg?fit=1920%2C1080&ssl=1" alt="image zelda tp">
+                        <figcaption>Twillight Princess</figcaption>
                     </figure>
                 </div>
                 <div id="ecran-4" class="carrousel_ecran">
                     <figure>
-                        <img src="https://picsum.photos/seed/4/500/300" alt="image ecran 4">
-                        <figcaption>Ecran 4</figcaption>
+                        <img class="image_zelda" src="https://freephonewallpapersformobile.files.wordpress.com/2014/09/zelda-wallpaper-1920x1080the-legend-of-zelda-ocarina-of-time-wallpaper.jpg" alt="image zelda oot">
+                        <figcaption>Ocarina of Time</figcaption>
                     </figure>
                 </div>
                 <div id="ecran-5" class="carrousel_ecran">
                     <figure>
-                        <img src="https://picsum.photos/seed/5/500/300" alt="image ecran 5">
-                        <figcaption>Ecran 5</figcaption>
+                        <img class="image_zelda" src="https://www.puissance-zelda.com/news/img/2013/01/WiiU_ZeldaWindWaker_Scrn01.jpg" alt="image zelda ww">
+                        <figcaption>The wind waker</figcaption>
                     </figure>
                 </div>
             </div>
             <ul class="caroussel_liste-liens">
-                <li><a href="#ecran-1":class="{actif:hrefCourant==='#ecran-1'}" class="caroussel_lien">ecran 1</a></li>
-                <li><a href="#ecran-2":class="{actif:hrefCourant==='#ecran-2'}" class="caroussel_lien">ecran 2</a></li>
-                <li><a href="#ecran-3":class="{actif:hrefCourant==='#ecran-3'}" class="caroussel_lien">ecran 3</a></li>
-                <li><a href="#ecran-4":class="{actif:hrefCourant==='#ecran-4'}" class="caroussel_lien">ecran 4</a></li>
-                <li><a href="#ecran-5":class="{actif:hrefCourant==='#ecran-5'}" class="caroussel_lien">ecran 5</a></li>
+                <li><a href="#ecran-1":class="{actif:hrefCourant==='#ecran-1'}" class="caroussel_lien">Zelda SS</a></li>
+                <li><a href="#ecran-2":class="{actif:hrefCourant==='#ecran-2'}" class="caroussel_lien">Zelda BOTW</a></li>
+                <li><a href="#ecran-3":class="{actif:hrefCourant==='#ecran-3'}" class="caroussel_lien">Zelda TP</a></li>
+                <li><a href="#ecran-4":class="{actif:hrefCourant==='#ecran-4'}" class="caroussel_lien">Zelda OoT</a></li>
+                <li><a href="#ecran-5":class="{actif:hrefCourant==='#ecran-5'}" class="caroussel_lien">Zelda TWW</a></li>
             </ul>
         </div>
+        
     </main>
     <footer>
 
